@@ -1,0 +1,253 @@
+{
+  "id": 162211295,
+  "title": "New Spider-Man Trailer Reveals New York City Sites",
+  "body": "A new Spider-Man gameplay trailer is debuting exclusively on IGN, and it centers on the open-world New York City that Spider-Man calls home.\n\nThe trailer, called Just the Facts: Marvel's New York, consists of Spider-Man swinging, spinning, and swan-diving through the upcoming game's open-world while a radio show hosted by J. Jonah Jameson plays in the background. In it, Jameson smack-talks everyone's favorite web-slinger while Peter Parker calls on the show to defend his alter ego.\n\nSome major landmarks are shown off in the trailer, both fictional and real. The video gives us a closer look at the Sanctum Sanctorum, the famous residence of Doctor Strange, and the Avengers Tower, headquarters of, you guessed it: The Avengers. As far as real-world landmarks, the Radio City Music Hall and a riff on MoMA called the Manhattan Museum of Contemporary Art (MMoCA) are both shown off.\n\nThe trailer also displays a lot of the game's open-world content beyond traversal, including finding Peter Parker's old backpacks scattered across the city, tracking down Oscorp research stations, and eliminating gang hideouts.\n\nInsomniac has also been going all-out in their advertising in New York City itself, reportedly putting a full-car subway advertisement on the Times Square Shuttle. Twitter user @JamesStevenson shared some pictures of the car online.\n\nColin Stevens is a freelance writer for IGN. Follow him on Twitter.",
+  "summary": {
+    "sentences": [
+      "A new Spider-Man gameplay trailer is debuting exclusively on IGN, and it centers on the open-world New York City that Spider-Man calls home.",
+      "The trailer, called Just the Facts: Marvel's New York, consists of Spider-Man swinging, spinning, and swan-diving through the upcoming game's open-world while a radio show hosted by J. Jonah Jameson plays in the background.",
+      "As far as real-world landmarks, the Radio City Music Hall and a riff on MoMA called the Manhattan Museum of Contemporary Art (MMoCA) are both shown off.",
+      "The trailer also displays a lot of the game's open-world content beyond traversal, including finding Peter Parker's old backpacks scattered across the city, tracking down Oscorp research stations, and eliminating gang hideouts.",
+      "Insomniac has also been going all-out in their advertising in New York City itself, reportedly putting a full-car subway advertisement on the Times Square Shuttle."
+    ]
+  },
+  "source": {
+    "id": 2301,
+    "name": "IGN",
+    "title": "IGN",
+    "description": "Movie news, previews and behind the scenes information.",
+    "links_in_count": 21254,
+    "home_page_url": "http://ign.com/",
+    "domain": "ign.com",
+    "locations": [],
+    "scopes": []
+  },
+  "author": {
+    "id": 2588677,
+    "name": "Colin Stevens"
+  },
+  "entities": {
+    "title": [
+      {
+        "text": "Spider-Man",
+        "score": 0.9839873909950256,
+        "types": [
+          "FictionalCharacter",
+          "Agent",
+          "Superhero",
+          "ComicsCharacter",
+          "Person",
+          "TelevisionShow",
+          "product"
+        ],
+        "links": {
+          "dbpedia": "http://dbpedia.org/resource/Spider-Man"
+        },
+        "indices": [[4, 13]]
+      },
+      {
+        "text": "New York City",
+        "score": 0.9999999403953552,
+        "types": ["City", "Location", "PopulatedPlace", "Settlement", "Place"],
+        "links": {
+          "dbpedia": "http://dbpedia.org/resource/New_York_City"
+        },
+        "indices": [[31, 43]]
+      }
+    ]
+  },
+  "keywords": [
+    "Trailer",
+    "York",
+    "City",
+    "Spider-Man",
+    "Sites",
+    "New York City",
+    "Peter Parker",
+    "trailer",
+    "open-world",
+    "landmarks",
+    "Twitter",
+    "radio",
+    "Parker",
+    "Peter",
+    "advertising",
+    "game",
+    "pictures",
+    "Stevens",
+    "online",
+    "Colin",
+    "@JamesStevenson",
+    "Oscorp",
+    "Avengers Tower",
+    "alter ego",
+    "Doctor Strange",
+    "IGN",
+    "Times Square",
+    "riff",
+    "Jonah",
+    "Marvel",
+    "New York",
+    "Manhattan",
+    "Sanctum Sanctorum",
+    "MoMA",
+    "subway",
+    "Insomniac",
+    "The Avengers"
+  ],
+  "hashtags": [
+    "#SpiderMan",
+    "#NewYorkCity",
+    "#OpenWorld",
+    "#IGN",
+    "#IGN",
+    "#Twitter",
+    "#MarvelComics",
+    "#NewYork",
+    "#Jonah",
+    "#AlterEgo",
+    "#SanctumSanctorum",
+    "#DoctorStrange",
+    "#StarkTower",
+    "#Avengers",
+    "#RadioCityMusicHall",
+    "#Ostinato",
+    "#MuseumOfModernArt",
+    "#Manhattan",
+    "#Oscorp",
+    "#InsomniacGames",
+    "#RapidTransit",
+    "#TimesSquare"
+  ],
+  "characters_count": 1418,
+  "words_count": 240,
+  "sentences_count": 11,
+  "paragraphs_count": 6,
+  "categories": [
+    {
+      "id": "IAB1-5",
+      "taxonomy": "iab-qag",
+      "level": 2,
+      "score": 0.28,
+      "confident": false,
+      "links": {
+        "self": "https://api.aylien.com/api/v1/classify/taxonomy/iab-qag/IAB1-5",
+        "parent": "https://api.aylien.com/api/v1/classify/taxonomy/iab-qag/IAB1"
+      }
+    },
+    {
+      "id": "IAB1",
+      "taxonomy": "iab-qag",
+      "level": 1,
+      "score": 0.11,
+      "confident": true,
+      "links": {
+        "self": "https://api.aylien.com/api/v1/classify/taxonomy/iab-qag/IAB1"
+      }
+    },
+    {
+      "id": "01014000",
+      "taxonomy": "iptc-subjectcode",
+      "level": 2,
+      "score": 0.4,
+      "confident": true
+    }
+  ],
+  "social_shares_count": {
+    "facebook": [
+      {
+        "count": 24,
+        "fetched_at": "2018-09-08T19:13:22Z"
+      },
+      {
+        "count": 24,
+        "fetched_at": "2018-09-06T23:57:29Z"
+      },
+      {
+        "count": 24,
+        "fetched_at": "2018-09-05T00:27:22Z"
+      },
+      {
+        "count": 24,
+        "fetched_at": "2018-09-03T13:04:07Z"
+      }
+    ],
+    "google_plus": [
+      {
+        "count": 0,
+        "fetched_at": "2018-08-16T18:27:09Z"
+      },
+      {
+        "count": 0,
+        "fetched_at": "2018-08-16T12:53:29Z"
+      },
+      {
+        "count": 0,
+        "fetched_at": "2018-08-16T07:11:27Z"
+      },
+      {
+        "count": 0,
+        "fetched_at": "2018-08-16T01:50:32Z"
+      }
+    ],
+    "linkedin": [
+      {
+        "count": 0,
+        "fetched_at": "2018-08-16T18:27:09Z"
+      },
+      {
+        "count": 0,
+        "fetched_at": "2018-08-16T12:53:30Z"
+      },
+      {
+        "count": 0,
+        "fetched_at": "2018-08-16T07:11:28Z"
+      },
+      {
+        "count": 0,
+        "fetched_at": "2018-08-16T01:50:33Z"
+      }
+    ],
+    "reddit": [
+      {
+        "count": 1,
+        "fetched_at": "2018-08-16T18:14:25Z"
+      },
+      {
+        "count": 1,
+        "fetched_at": "2018-08-16T09:52:16Z"
+      },
+      {
+        "count": 1,
+        "fetched_at": "2018-08-16T02:20:26Z"
+      }
+    ]
+  },
+  "media": [
+    {
+      "type": "image",
+      "url": "http://assets1.ignimgs.com/2017/06/15/spidey-suit-1497549832126_1280w.jpg",
+      "format": "JPEG",
+      "content_length": 116514,
+      "width": 1280,
+      "height": 720
+    }
+  ],
+  "sentiment": {
+    "title": {
+      "polarity": "neutral",
+      "score": 0.92093
+    },
+    "body": {
+      "polarity": "positive",
+      "score": 0.67239
+    }
+  },
+  "language": "en",
+  "published_at": "2018-08-15T18:48:45Z",
+  "links": {
+    "permalink": "http://www.ign.com/articles/2018/08/15/new-spider-man-trailer-reveals-new-york-city-sites",
+    "related_stories": "https://api.newsapi.aylien.com/api/v1/related_stories?story_id=162211295",
+    "coverages": "https://api.newsapi.aylien.com/api/v1/coverages?story_id=162211295"
+  }
+}
