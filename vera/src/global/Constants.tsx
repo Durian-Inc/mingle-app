@@ -8,7 +8,7 @@ export default class Constants {
   }
 
   // App Info
-  static AppName: string = 'spooky newz';
+  static AppName: string = 'Vera';
 
   // Dimensions
   static screenWidth: number = Dimensions.get('window').width;
@@ -41,28 +41,11 @@ export default class Constants {
   // Numbers
   static articleTitleFontSize: number = 22;
 
-  static urlbase: string = 'http://teamgatez.peakdigital.xyz:80/';
-  static aylienURL: string = 'https://api.newsapi.aylien.com/api/v1/';
-  static AylienAuth = {
-    'X-AYLIEN-NewsAPI-Application-ID': 'd6c67af2',
-    'X-AYLIEN-NewsAPI-Application-Key': '53d9ef7c2a09458e7f63e742bc780e90'
-  };
-
-  static AylienEndpoints = {
-    stories: 'stories',
-    related: 'related_stories',
-    coverages: 'coverages',
-    autocompletes: 'autocompletes',
-    times: 'time_series',
-    trends: 'trends',
-    histograms: 'histograms'
-  };
-
   //Contexts
   static CurrentScreenContexts = {
     WelcomeScreen: 0,
     Main: 1,
-    Profile: 2
+    Chat: 2
   };
 
   static NetworkContexts = {

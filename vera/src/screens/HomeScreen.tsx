@@ -3,14 +3,15 @@
 import * as React from 'react';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import Spacer from '../components/Spacer';
-import { Screen } from '../global/Static';
+// import from '../global/Constants';
+import Constants from '../global/Constants';
 
 interface IData {
     key: string;
     groupTitle: string;
     lastMessage?: string;
     time?: string;
-    screenNav: Screen;
+    screenNav: any
 }
 
 interface IHomeScreenProps {
@@ -23,77 +24,77 @@ const data: IData[] = [
         groupTitle: "Allo 2.0 Devs",
         lastMessage: "Clay: Innocent is a fucking loser",
         time: "aaa",
-        screenNav: Screen.Chat
+        screenNav: 2
     },
     {
         key: "1",
         groupTitle: "Innocent",
         time: "30m ago",
         lastMessage: "I'm a fucking loser",
-        screenNav: Screen.Chat
+        screenNav: 2
     },
     {
         key: "2",
         groupTitle: "Mark Raymoond Jr.",
         time: "30m ago",
         lastMessage: "I'm pretty sure Bush did 9/11",
-        screenNav: Screen.Chat
+        screenNav: 2
     },
     {
         key: "3",
         groupTitle: "Claytony Price",
         time: "45m ago",
         lastMessage: "Dude you fuckin' failed 1570. See you next semester kiddo",
-        screenNav: Screen.Chat
+        screenNav: 2
     },
     {
         key: "4",
         groupTitle: "Ricardo Morales",
         time: "1hr ago",
         lastMessage: "Where the hell was Alex during the presentation?",
-        screenNav: Screen.Chat
+        screenNav: 2
     },
     {
         key: "5",
         groupTitle: "Satya Nadella",
         time: "2hr ago",
         lastMessage: "If I step down, do you want to be CEO?",
-        screenNav: Screen.Chat
+        screenNav: 2
     },
     {
         key: "6",
         groupTitle: "Hot Coffee Shop Girl",
         time: "10hr ago",
         lastMessage: "There's no easy way to say this, but I'm pregnant",
-        screenNav: Screen.Chat
+        screenNav: 2
     },
     {
         key: "7",
         groupTitle: "Chaman L. Sabharwhal",
         time: "14 hr ago",
         lastMessage: "zzzyzhggeeejejee e TARIAH",
-        screenNav: Screen.Chat
+        screenNav: 2
     },
     {
         key: "8",
         groupTitle: "Jonas Buxton",
         time: "1 day ago",
         lastMessage: "Help my eyebrows are stuck looking stupid",
-        screenNav: Screen.Chat
+        screenNav: 2
     },
     {
         key: "9",
         groupTitle: "Alex Tariah",
         time: "1 day ago",
         lastMessage: "Heegggjg ffeeaffffj",
-        screenNav: Screen.Chat
+        screenNav: 2
     },
     {
         key: "10",
         groupTitle: "Norad Price",
         time: "1 day ago",
         lastMessage: "Why aren't we using Flutter?",
-        screenNav: Screen.Chat
+        screenNav: 2
     }
 ];
 
@@ -115,7 +116,7 @@ class HomeScreen extends React.Component<IHomeScreenProps, {}> {
                             color: "#eeeeff"
                         }}
                     >
-                        Vera
+                        {Constants.AppName}
                     </Text>
                 </View>
                 <FlatList
@@ -124,7 +125,7 @@ class HomeScreen extends React.Component<IHomeScreenProps, {}> {
                         return (
                             <TouchableOpacity
                                 style={style.list}
-                                onPress={() => { this.props.navigate(x.item.screenNav, x.item.key) }}
+                                onPress={() => { /*this.props.navigate(x.item.screenNav, x.item.key) */ }}
                             >
                                 <Image
                                     source={{ uri: "http://papers.co/wallpaper/papers.co-nd81-rose-flower-blue-rain-bokeh-zoom-40-wallpaper.jpg" }}
