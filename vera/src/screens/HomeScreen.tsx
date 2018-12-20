@@ -125,7 +125,7 @@ class HomeScreen extends React.Component<IHomeScreenProps, {}> {
                         return (
                             <TouchableOpacity
                                 style={style.list}
-                                onPress={() => { /*this.props.navigate(x.item.screenNav, x.item.key) */ }}
+                                onPress={() => { this.props.navigate(x.item.screenNav, x.item.key) }}
                             >
                                 <Image
                                     source={{ uri: "http://papers.co/wallpaper/papers.co-nd81-rose-flower-blue-rain-bokeh-zoom-40-wallpaper.jpg" }}

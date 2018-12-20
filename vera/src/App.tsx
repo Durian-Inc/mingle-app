@@ -26,7 +26,11 @@ export default class App extends React.Component<{}, IAppState> {
       if (isUserSignedIn === true) {
         console.log('persistent login');
         this.setState({
-          currentScreenContext: Constants.CurrentScreenContexts.Main
+          currentScreenContext: Constants.CurrentScreenContexts.Main,
+          modal:
+            <HomeScreen
+              navigate={this.navigate}
+            />
         });
       }
     });
@@ -39,7 +43,16 @@ export default class App extends React.Component<{}, IAppState> {
   navigate = (newScreen: Screen, key: string) => {
     console.log("Navigating to " + newScreen + " with " + key);
     this.setState({
-      modal: <ChatScreen />
+      modal: <ChatScreen
+        closeChatScreen={() => {
+          this.setState({
+            modal:
+              <HomeScreen
+                navigate={this.navigate}
+              />
+          });
+        }}
+      />
     });
   }
 
@@ -51,9 +64,6 @@ export default class App extends React.Component<{}, IAppState> {
         <Spacer
           width="100%"
         />
-        <HomeScreen
-          navigate={this.navigate}
-        />
         {this.state.modal}
       </View>
     );
@@ -62,6 +72,7 @@ export default class App extends React.Component<{}, IAppState> {
 
 const style = StyleSheet.create({
   mainScreen: {
-    flex: 1
+    flex: 1,
+    position: "relative"
   }
 });

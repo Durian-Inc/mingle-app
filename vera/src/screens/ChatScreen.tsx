@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { StyleSheet, TouchableOpacity, Text, View } from 'react-native';
 
 /*
     Chat data:
@@ -11,24 +11,33 @@ import { View, StyleSheet } from 'react-native';
         Text
 */
 
-class ChatScreen extends React.Component<{}, {}> {
+interface IChatScreenProps {
+    closeChatScreen: any;
+}
+
+class ChatScreen extends React.Component<IChatScreenProps, {}> {
     render() {
         return (
             <View
                 style={style.chatScreenMain}
-            />
+            >
+                <TouchableOpacity
+                    onPress={this.props.closeChatScreen}
+                >
+                    <Text
+                        style={{fontSize: 48}}
+                    >←</Text>
+                </TouchableOpacity>
+            </View>
         );
     }
 }
 
 const style = StyleSheet.create({
     chatScreenMain: {
-        position: 'absolute',
-        top: 0,
-        bottom: 0,
-        left: 0,
-        right: 0,
-        backgroundColor: 'red'
+        flex: 1,
+        backgroundColor: '#e4e4e4',
+        padding: 10
     }
 });
 
