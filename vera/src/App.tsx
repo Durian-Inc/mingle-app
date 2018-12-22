@@ -1,5 +1,5 @@
 import React from 'react';
-import StorageHandler from './global/StorageHandler';
+// import StorageHandler from './global/StorageHandler';
 import Constants from './global/Constants';
 import { View, StyleSheet } from 'react-native';
 import HomeScreen from './screens/HomeScreen';
@@ -22,17 +22,13 @@ export default class App extends React.Component<{}, IAppState> {
   }
 
   componentWillMount() {
-    StorageHandler._isUserSignedIn().then(isUserSignedIn => {
-      if (isUserSignedIn === true) {
-        console.log('persistent login');
-        this.setState({
-          currentScreenContext: Constants.CurrentScreenContexts.Main,
-          modal:
-            <HomeScreen
-              navigate={this.navigate}
-            />
-        });
-      }
+    console.log('persistent login');
+    this.setState({
+      currentScreenContext: Constants.CurrentScreenContexts.Main,
+      modal:
+        <HomeScreen
+          navigate={this.navigate}
+        />
     });
   }
 
