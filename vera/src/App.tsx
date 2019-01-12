@@ -48,6 +48,7 @@ export default class App extends React.Component<{}, IAppState> {
               />
           });
         }}
+        itemKey={key}
       />
     });
   }

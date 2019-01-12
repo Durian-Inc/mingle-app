@@ -3,100 +3,12 @@
 import * as React from 'react';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import Spacer from '../components/Spacer';
-// import from '../global/Constants';
 import Constants from '../global/Constants';
-
-interface IData {
-    key: string;
-    groupTitle: string;
-    lastMessage?: string;
-    time?: string;
-    screenNav: any
-}
+import { messageListData } from '../mock/Data';
 
 interface IHomeScreenProps {
     navigate: any;
 }
-
-const data: IData[] = [
-    {
-        key: "0",
-        groupTitle: "Allo 2.0 Devs",
-        lastMessage: "Clay: Innocent is a fucking loser",
-        time: "aaa",
-        screenNav: 2
-    },
-    {
-        key: "1",
-        groupTitle: "Innocent",
-        time: "30m ago",
-        lastMessage: "I'm a fucking loser",
-        screenNav: 2
-    },
-    {
-        key: "2",
-        groupTitle: "Mark Raymoond Jr.",
-        time: "30m ago",
-        lastMessage: "I'm pretty sure Bush did 9/11",
-        screenNav: 2
-    },
-    {
-        key: "3",
-        groupTitle: "Claytony Price",
-        time: "45m ago",
-        lastMessage: "Dude you fuckin' failed 1570. See you next semester kiddo",
-        screenNav: 2
-    },
-    {
-        key: "4",
-        groupTitle: "Ricardo Morales",
-        time: "1hr ago",
-        lastMessage: "Where the hell was Alex during the presentation?",
-        screenNav: 2
-    },
-    {
-        key: "5",
-        groupTitle: "Satya Nadella",
-        time: "2hr ago",
-        lastMessage: "If I step down, do you want to be CEO?",
-        screenNav: 2
-    },
-    {
-        key: "6",
-        groupTitle: "Hot Coffee Shop Girl",
-        time: "10hr ago",
-        lastMessage: "There's no easy way to say this, but I'm pregnant",
-        screenNav: 2
-    },
-    {
-        key: "7",
-        groupTitle: "Chaman L. Sabharwhal",
-        time: "14 hr ago",
-        lastMessage: "zzzyzhggeeejejee e TARIAH",
-        screenNav: 2
-    },
-    {
-        key: "8",
-        groupTitle: "Jonas Buxton",
-        time: "1 day ago",
-        lastMessage: "Help my eyebrows are stuck looking stupid",
-        screenNav: 2
-    },
-    {
-        key: "9",
-        groupTitle: "Alex Tariah",
-        time: "1 day ago",
-        lastMessage: "Heegggjg ffeeaffffj",
-        screenNav: 2
-    },
-    {
-        key: "10",
-        groupTitle: "Norad Price",
-        time: "1 day ago",
-        lastMessage: "Why aren't we using Flutter?",
-        screenNav: 2
-    }
-];
 
 class HomeScreen extends React.Component<IHomeScreenProps, {}> {
     render() {
@@ -104,23 +16,15 @@ class HomeScreen extends React.Component<IHomeScreenProps, {}> {
             <View
                 style={style.backgroundView}
             >
-                <View style={{
-                    width: "100%",
-                    height: 65,
-                    backgroundColor: "#009688"
-                }}>
+                <View style={style.titleBar}>
                     <Text
-                        style={{
-                            fontSize: 32,
-                            margin: 10,
-                            color: "#eeeeff"
-                        }}
+                        style={style.titleBarText}
                     >
                         {Constants.AppName}
                     </Text>
                 </View>
                 <FlatList
-                    data={data}
+                    data={messageListData}
                     renderItem={(x) => {
                         return (
                             <TouchableOpacity
@@ -188,6 +92,17 @@ const style = StyleSheet.create({
     backgroundView: {
         backgroundColor: 'white',
         flex: 1
+    },
+    titleBar: {
+
+        width: "100%",
+        height: 65,
+        backgroundColor: "#009688"
+    },
+    titleBarText: {
+        fontSize: 32,
+        margin: 10,
+        color: "#eeeeff"
     },
     buttonLayer: {
         position: "absolute",

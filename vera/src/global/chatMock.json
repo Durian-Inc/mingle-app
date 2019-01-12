@@ -1,0 +1,20 @@
+{
+    "groupID": "0",
+    "events": [{
+            "messageType": "message",
+            "data": {
+                "text": "Innocent is a fucking loser",
+                "user": "00001"
+            },
+            "id": "0"
+        },
+        {
+            "messageType": "like",
+            "data": {
+                "messageID": "0",
+                "user": "0000"
+            },
+            "id": "1"
+        }
+    ]
+}
