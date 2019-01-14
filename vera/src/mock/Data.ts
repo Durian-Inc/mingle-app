@@ -28,7 +28,7 @@ export const messageListData: IMessageListData[] = [
         key: "3",
         groupTitle: "Claytony Price",
         time: "45m ago",
-        lastMessage: "Dude you fuckin' failed 1570. See you next semester kiddo",
+        lastMessage: "v",
         screenNav: 2
     },
     {

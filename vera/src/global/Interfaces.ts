@@ -21,7 +21,7 @@ export interface IUserData {
 }
 
 export interface IMessageData {
-  message: string;
+  data: string;
   sentBy: string;
   time: Date;
 }
@@ -34,8 +34,8 @@ export interface IGroupData {
 
 export interface IEventMessage {
   text: string;
+  size?: string;
   user: string;
-  size?: number;
 }
 
 export interface IEventLike {

@@ -1,20 +1,205 @@
-{
-    "groupID": "0",
-    "events": [{
-            "messageType": "message",
-            "data": {
-                "text": "Innocent is a fucking loser",
-                "user": "00001"
+[
+    {
+        "groupID": "0",
+        "events": [
+            {
+                "messageType": "message",
+                "data": {
+                    "text": "Innocent is a fucking loser",
+                    "user": "00001"
+                },
+                "id": "0",
+                "timestamp": "1969-06-09T04:20:00-0600"
             },
-            "id": "0"
-        },
-        {
-            "messageType": "like",
-            "data": {
-                "messageID": "0",
-                "user": "0000"
+            {
+                "messageType": "like",
+                "data": {
+                    "messageID": "0",
+                    "user": "0000"
+                },
+                "id": "1",
+                "timestamp": "2018-12-31T23:59:58-0600"
             },
-            "id": "1"
-        }
-    ]
-}
+            {
+                "messageType": "like",
+                "data": {
+                    "messageID": "0",
+                    "user": "0003"
+                },
+                "id": "2",
+                "timestamp": "2018-12-31T23:59:59-0600"
+            }
+        ]
+    },
+    {
+        "groupID": "1",
+        "events": [
+            {
+                "messageType": "message",
+                "data": {
+                    "text": "I'm a fucking loser",
+                    "user": "0003"
+                },
+                "id": "0",
+                "timestamp": "1969-06-09T04:20:00-0600"
+            },
+            {
+                "messageType": "message",
+                "data": {
+                    "text": "Retweet",
+                    "user": "0000"
+                },
+                "id": "1",
+                "timestamp": "1969-06-09T04:20:00-0600"
+            }
+        ]
+    },
+    {
+        "groupID": "2",
+        "events": [
+            {
+                "messageType": "message",
+                "data": {
+                    "text": "I'm pretty sure Bush did 9/11",
+                    "user": "0003"
+                },
+                "id": "0",
+                "timestamp": "1969-06-09T04:20:00-0600"
+            }
+        ]
+    },
+    {
+        "groupID": "3",
+        "events": [
+            {
+                "messageType": "message",
+                "data": {
+                    "text": "Hi professor, how'd I do on the exam?",
+                    "user": "0000"
+                },
+                "id": "0",
+                "timestamp": "1969-06-09T04:20:00-0600"
+            },
+            {
+                "messageType": "message",
+                "data": {
+                    "text": "Dude you fuckin' failed 1570. See you next semester kiddo",
+                    "user": "0004"
+                },
+                "id": "1",
+                "timestamp": "1969-06-09T04:20:00-0600"
+            }
+        ]
+    },
+    {
+        "groupID": "4",
+        "events": [
+            {
+                "messageType": "message",
+                "data": {
+                    "text": "Where the hell was Alex during the presentation?",
+                    "user": "0005"
+                },
+                "id": "0",
+                "timestamp": "1969-06-09T04:20:00-0600"
+            }
+        ]
+    },
+    {
+        "groupID": "5",
+        "events": [
+            {
+                "messageType": "message",
+                "data": {
+                    "text": "If I step down, do you want to be CEO?",
+                    "user": "0006"
+                },
+                "id": "0",
+                "timestamp": "1969-06-09T04:20:00-0600"
+            }
+        ]
+    },
+    {
+        "groupID": "6",
+        "events": [
+            {
+                "messageType": "message",
+                "data": {
+                    "text": "What do you think about conspiracy theories?",
+                    "user": "0000"
+                },
+                "id": "0",
+                "timestamp": "1969-06-09T04:20:00-0600"
+            },
+            {
+                "messageType": "message",
+                "data": {
+                    "text": " I'm a fan personally...",
+                    "user": "0000"
+                },
+                "id": "1",
+                "timestamp": "1969-06-09T04:20:00-0600"
+            },
+            {
+                "messageType": "like",
+                "data": {
+                    "messageID": "1",
+                    "user": "0007"
+                },
+                "id": "2",
+                "timestamp": "1969-06-09T04:20:00-0600"
+            },
+            {
+                "messageType": "message",
+                "data": {
+                    "text": "There's no easy way to say this, but I'm pretty sure Bush did 9/11",
+                    "user": "0007"
+                },
+                "id": "3",
+                "timestamp": "1969-06-09T04:20:00-0600"
+            }
+        ]
+    },
+    {
+        "groupID": "7",
+        "events": [
+            {
+                "messageType": "message",
+                "data": {
+                    "text": "zzzyzhggeeejejee e TARIAH",
+                    "user": "0008"
+                },
+                "id": "0",
+                "timestamp": "1969-06-09T04:20:00-0600"
+            }
+        ]
+    },
+    {
+        "groupID": "8",
+        "events": [
+            {
+                "messageType": "message",
+                "data": {
+                    "text": "Help my eyebrows are stuck looking stupid",
+                    "user": "0009"
+                },
+                "id": "0",
+                "timestamp": "1969-06-09T04:20:00-0600"
+            }
+        ]
+    },
+    {
+        "groupID": "10",
+        "events": [
+            {
+                "messageType": "message",
+                "data": {
+                    "text": "Why aren't we using Flutter?",
+                    "user": "0011"
+                },
+                "id": "0",
+                "timestamp": "1969-06-09T04:20:00-0600"
+            }
+        ]
+    }
+]
