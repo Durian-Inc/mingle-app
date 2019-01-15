@@ -13,10 +13,14 @@ function toQueryString(params) {
 }
 
 export default class App extends React.Component {
-  state = {
-    username: undefined,
-    loggedIn: 'false',
-  };
+  constructor(props) {
+    super(props)
+    this.state = {
+      username: undefined,
+      encodedToken: undefined,
+      loggedIn: 'false',
+    }
+  }
 
   _loginWithAuth0 = async () => {
     const redirectUrl = AuthSession.getRedirectUrl();
@@ -24,9 +28,10 @@ export default class App extends React.Component {
     const result = await AuthSession.startAsync({
       authUrl: `${auth0Domain}/authorize` + toQueryString({
         client_id: auth0ClientId,
-        response_type: 'token',
-        scope: 'openid name',
+        response_type: 'id_token token',
+        scope: 'openid profile',
         redirect_uri: redirectUrl,
+        nonce: Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
       }),
     });
 
@@ -37,7 +42,6 @@ export default class App extends React.Component {
   }
 
   handleParams = (responseObj) => {
-    console.log('Print boi')
     console.log(responseObj)
     if (responseObj.error) {
       Alert.alert('Error', responseObj.error_description
@@ -45,10 +49,11 @@ export default class App extends React.Component {
       return;
     }
     const encodedToken = responseObj.id_token;
-    const decodedToken = jwtDecoder(encodedToken);
+    const decodedToken = jwtDecoder(encodedToken, { header: true });
     const username = decodedToken.name;
     this.setState({ 
       username,
+      encodedToken,
       loggedIn: 'true'
     });
   }
@@ -59,9 +64,10 @@ export default class App extends React.Component {
       authUrl: `${auth0Domain}/authorize` + toQueryString({
         connection: 'google-oauth2',
         client_id: auth0ClientId,
-        response_type: 'token',
-        scope: 'openid name',
+        response_type: 'id_token token',
+        scope: 'openid profile',
         redirect_uri: redirectUrl,
+        nonce: Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
       }),
     });
     console.log(result);
@@ -70,21 +76,26 @@ export default class App extends React.Component {
     }
   }
 
-  logUserOut() {
+  logUserOut = () => {
     this.setState({
       username: undefined,
+      encodedToken: undefined,
       loggedIn: 'false'
     })
   }
+
   render() {
     return (
       <View style={styles.container}>
-      <Text style={styles.title}> Is user logged in: {this.state.loggedIn} </Text>
+        <Text style={styles.title}> {this.state.loggedIn} </Text>
         <View style={styles.loginOptions}>
           <Button title='Login With Auth0' onPress={this._loginWithAuth0} color={'red'}/>
           <Button title='Login With Google' onPress={this._loginWithAuth0Google} color={'green'}/>
         </View>
-        <Button title='Logout' onPress={this.logUserOut.bind(this)}/>
+        <View style={styles.loginOptions}>
+          <Button title='Logout' onPress={this.logUserOut}/>
+        </View>
+        <Text> The user's token: {this.state.encodedToken} </Text>
       </View>
 
     );
@@ -101,5 +112,8 @@ const styles = StyleSheet.create({
   loginOptions: {
     flex: 0,
     flexDirection: 'row',
+  },
+  title: {
+    fontSize: 34,
   }
 });
