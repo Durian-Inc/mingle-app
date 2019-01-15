@@ -1,10 +1,10 @@
 import { AuthSession } from 'expo';
 import React from 'react';
-import { StyleSheet, Text, View, Button, Alert } from 'react-native';
+import { StyleSheet, View, Button, Alert, Text } from 'react-native';
 import jwtDecoder from 'jwt-decode';
 
-const auth0ClientId = 'rl90D1k9BRuLjKAGPKPrUHlwVF10auGb';
-const auth0Domain = 'https://durian-inc.auth0.com';
+const auth0ClientId = CLIENT_ID;
+const auth0Domain = DOMAIN;
 
 function toQueryString(params) {
   return '?' + Object.entries(params)
@@ -15,6 +15,7 @@ function toQueryString(params) {
 export default class App extends React.Component {
   state = {
     username: undefined,
+    loggedIn: 'false',
   };
 
   _loginWithAuth0 = async () => {
@@ -36,6 +37,8 @@ export default class App extends React.Component {
   }
 
   handleParams = (responseObj) => {
+    console.log('Print boi')
+    console.log(responseObj)
     if (responseObj.error) {
       Alert.alert('Error', responseObj.error_description
         || 'something went wrong while logging in');
@@ -44,7 +47,10 @@ export default class App extends React.Component {
     const encodedToken = responseObj.id_token;
     const decodedToken = jwtDecoder(encodedToken);
     const username = decodedToken.name;
-    this.setState({ username });
+    this.setState({ 
+      username,
+      loggedIn: 'true'
+    });
   }
 
   _loginWithAuth0Google = async () => {
@@ -58,20 +64,29 @@ export default class App extends React.Component {
         redirect_uri: redirectUrl,
       }),
     });
-
     console.log(result);
     if (result.type === 'success') {
       this.handleParams(result.params);
     }
   }
 
+  logUserOut() {
+    this.setState({
+      username: undefined,
+      loggedIn: 'false'
+    })
+  }
   render() {
     return (
       <View style={styles.container}>
-        <Button title='Login With Auth0' onPress={this._loginWithAuth0} />
-        <Text>Open up App.js to start working on your app!</Text>
-        <Button title='Login With Google' onPress={this._loginWithAuth0Google} />
+      <Text style={styles.title}> Is user logged in: {this.state.loggedIn} </Text>
+        <View style={styles.loginOptions}>
+          <Button title='Login With Auth0' onPress={this._loginWithAuth0} color={'red'}/>
+          <Button title='Login With Google' onPress={this._loginWithAuth0Google} color={'green'}/>
+        </View>
+        <Button title='Logout' onPress={this.logUserOut.bind(this)}/>
       </View>
+
     );
   }
 }
@@ -83,4 +98,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  loginOptions: {
+    flex: 0,
+    flexDirection: 'row',
+  }
 });
