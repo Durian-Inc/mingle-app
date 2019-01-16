@@ -15,9 +15,9 @@ export default class Constants {
   static auth0Domain: string = 'http://durian-inc.auth0.com';
 
   // Social Icons
-  static facebookIcon: string = 'https://bit.ly/2sCFx9r'
-  static googleIcon: string = 'https://bit.ly/2Mbq5de'
-  static twitterIcon: string = 'https://bit.ly/2HeXrJt'
+  static facebookIcon: string = 'https://bit.ly/2CuKNQG'
+  static googleIcon: string = 'https://bit.ly/2oVFQse'
+  static twitterIcon: string = 'https://bit.ly/2QSSwNG'
 
   // Dimensions
   static screenWidth: number = Dimensions.get('window').width;

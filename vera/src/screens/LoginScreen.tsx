@@ -1,7 +1,7 @@
 /* tslint:disable */
 
 import * as React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, Image, Text } from 'react-native';
 import Constants from '../global/Constants';
 import { AuthSession } from 'expo';
 
@@ -41,12 +41,23 @@ class LoginScreen extends React.Component<ILoginScreenProps, {}>{
         return (
             <View style={styles.backgroundView}>
                 <View style={styles.content}>
-                    <Text style={styles.title}> {Constants.AppName} </Text>
-                    <Text style={{fontSize: 14}}>Long live Allo</Text>
+                    <Image 
+                        source={require('../../assets/icon.png')} 
+                        style={{
+                            width: 512,
+                            height: 512,
+                        }}
+                        />
                     <View style={styles.loginOptions}>
                         {/* Facebook Login */}
                         <TouchableOpacity 
-                            style={styles.socialButton}
+                            style={{
+                                padding: 5,
+                                flexDirection: 'row',
+                                backgroundColor: '#3b5998',
+                                borderRadius: 5,
+                                width: 350
+                            }}
                             onPress={() => {
                                 this._socialLogin('facebook')
                             }}
@@ -54,15 +65,31 @@ class LoginScreen extends React.Component<ILoginScreenProps, {}>{
                             <Image 
                                 source={{ uri: Constants.facebookIcon }}
                                 style={{
-                                    width: 40,
-                                    height: 40,
-                                    margin: 20
+                                    width: 24,
+                                    height: 24,
+                                    margin: 10
                                 }}
                             /> 
+                            <Text 
+                                style={{
+                                    fontSize: 16,
+                                    paddingTop: 12,
+                                    color: 'white'
+                                }}
+                            >
+                                Continue with Facebook
+                            </Text>
                         </TouchableOpacity>
                         {/* Google Login */}
                         <TouchableOpacity 
-                            style={styles.socialButton}
+                            style={{
+                                padding: 5,
+                                flexDirection: 'row',
+                                borderColor: '#696969',
+                                borderRadius: 5,
+                                borderWidth: 1,
+                                marginTop: 20
+                            }}
                             onPress={() => {
                                 this._socialLogin('google-oauth2')
                             }}
@@ -70,15 +97,30 @@ class LoginScreen extends React.Component<ILoginScreenProps, {}>{
                             <Image 
                                 source={{ uri: Constants.googleIcon }}
                                 style={{
-                                    width: 40,
-                                    height: 40,
-                                    margin: 20
+                                    width: 24,
+                                    height: 24,
+                                    margin: 10
                                 }}
                             />
+                            <Text 
+                                style={{
+                                    fontSize: 16,
+                                    paddingTop: 12,
+                                    color: 'black' 
+                                }}
+                            > 
+                                Continue with Google
+                            </Text>
                         </TouchableOpacity>
                         {/* Twitter Login */}
                         <TouchableOpacity 
-                            style={styles.socialButton}
+                            style={{
+                                backgroundColor: '#1DA1F2',
+                                padding: 5,
+                                flexDirection: 'row',
+                                borderRadius: 5,
+                                marginTop: 20
+                            }}
                             onPress={() => {
                                 this._socialLogin('twitter')
                             }}
@@ -86,11 +128,20 @@ class LoginScreen extends React.Component<ILoginScreenProps, {}>{
                             <Image
                                 source={{ uri: Constants.twitterIcon }}
                                 style={{
-                                    width: 40,
-                                    height: 40,
-                                    margin: 20
+                                    width: 24,
+                                    height: 24,
+                                    margin: 10
                                 }}
                             />
+                            <Text 
+                                style={{
+                                    fontSize: 16,
+                                    paddingTop: 12,
+                                    color: 'white' 
+                                }}
+                            >
+                                Continue with Twitter
+                            </Text>
                         </TouchableOpacity>
                     </View> 
                 </View>        
@@ -101,7 +152,7 @@ class LoginScreen extends React.Component<ILoginScreenProps, {}>{
 
 const styles = StyleSheet.create({
     backgroundView: {
-        backgroundColor: '#52c7b8',
+        backgroundColor: 'white',
         flex: 1,
     },
     content: {
@@ -124,11 +175,10 @@ const styles = StyleSheet.create({
     },
     loginOptions: {
         flex: 0,
-        flexDirection: 'row',
-        marginTop: 100,
     },
     socialButton: {
         padding: 5,
+        flexDirection: 'row'
     }
 });
 
