@@ -10,6 +10,15 @@ export default class Constants {
   // App Info
   static AppName: string = 'Vera';
 
+  // Auth Credentials
+  static auth0ClientId: string = 'MINGLE-CLIENTID';
+  static auth0Domain: string = 'http://durian-inc.auth0.com';
+
+  // Social Icons
+  static facebookIcon: string = 'https://bit.ly/2CuKNQG'
+  static googleIcon: string = 'https://bit.ly/2oVFQse'
+  static twitterIcon: string = 'https://bit.ly/2QSSwNG'
+
   // Dimensions
   static screenWidth: number = Dimensions.get('window').width;
   static screenHeight: number = Dimensions.get('window').height;

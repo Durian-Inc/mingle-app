@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
+  "expoServerPort": null,
   "packagerPort": 19001,
-  "packagerPid": 13172,
-  "expoServerNgrokUrl": "https://t4-g5j.anonymous.vera.exp.direct",
-  "packagerNgrokUrl": "https://packager.t4-g5j.anonymous.vera.exp.direct",
-  "ngrokPid": 1848
+  "packagerPid": 65230,
+  "expoServerNgrokUrl": "https://y2-dfx.25cent9.vera.exp.direct",
+  "packagerNgrokUrl": "https://packager.y2-dfx.25cent9.vera.exp.direct",
+  "ngrokPid": 65257
 }

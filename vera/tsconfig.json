@@ -15,7 +15,8 @@
         "noUnusedParameters": true,
         "noImplicitReturns": true,
         "skipLibCheck": true,
-        "moduleResolution":"Node"
+        "moduleResolution":"Node",
+        "lib": ["es2015", "es2017", "dom"]
     },
     "filesGlob": [
         "typings/index.d.ts",
