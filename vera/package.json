@@ -22,8 +22,10 @@
   },
   "dependencies": {
     "@types/expo": "^27.0.8",
+    "@types/jwt-decode": "^2.2.1",
     "expo": "^29.0.1",
     "expo-cli": "^1.1.0",
+    "jwt-decode": "^2.2.0",
     "native-base": "^2.9.2",
     "prettier": "^1.14.3",
     "react": "^16.7.0",

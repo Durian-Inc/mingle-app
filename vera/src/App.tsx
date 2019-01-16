@@ -3,12 +3,14 @@ import React from 'react';
 import Constants from './global/Constants';
 import { View, StyleSheet } from 'react-native';
 import HomeScreen from './screens/HomeScreen';
+import LoginScreen from './screens/LoginScreen'
 import Spacer from './components/Spacer';
 import ChatScreen from './screens/ChatScreen';
 
 interface IAppState {
   currentScreenContext: number;
   modal: any;
+  id_token: string;
 }
 
 export default class App extends React.Component<{}, IAppState> {
@@ -17,17 +19,19 @@ export default class App extends React.Component<{}, IAppState> {
 
     this.state = {
       currentScreenContext: Constants.CurrentScreenContexts.WelcomeScreen,
-      modal: undefined
+      modal: undefined,
+      id_token: undefined,
     };
   }
 
   componentWillMount() {
-    console.log('persistent login');
+    console.log('Presenting login screen');
+    console.log(Constants.CurrentScreenContexts.Main)
     this.setState({
       currentScreenContext: Constants.CurrentScreenContexts.Main,
       modal:
-        <HomeScreen
-          navigate={this.navigate}
+        <LoginScreen
+          openTheGates={this.openTheGates}
         />
     });
   }
@@ -50,6 +54,18 @@ export default class App extends React.Component<{}, IAppState> {
         }}
         itemKey={key}
       />
+    });
+  }
+
+  openTheGates = (token: any) => {
+    console.log('User is logged in')
+    this.setState({
+      currentScreenContext: Constants.CurrentScreenContexts.Main,
+      modal:
+        <HomeScreen
+          navigate={this.navigate}
+        />,
+      id_token: token,
     });
   }
 
